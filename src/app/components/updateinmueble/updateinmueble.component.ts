@@ -25,7 +25,7 @@ export class UpdateinmuebleComponent {
   }
 
   form = new FormGroup({
-    inmueble: new FormControl('', [Validators.required]),
+    inmuebles: new FormControl('', [Validators.required]),
     direccion: new FormControl('', [Validators.required]),
     id_inmueble: new FormControl('', [Validators.required])
   })
@@ -34,7 +34,7 @@ export class UpdateinmuebleComponent {
     this.data = this.form.value
     console.log(this.data)
     
-    this.service.updateInmueble(this.inm?.id_inmueble, this.data).subscribe(data => {
+    this.service.updateInmueble(this.inm?.id, this.data).subscribe(data => {
       console.log(data)
     })
 
