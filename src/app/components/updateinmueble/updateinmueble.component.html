@@ -30,29 +30,26 @@
         <h2 class="text-center mb-3">Update User</h2>
         <form  [formGroup]="form" (ngSubmit)="submit()" >
 
-          <!--Email-->
           <div class="row">
             <div class="col-md-12 form-group mb-3">
-              <label for="email" class="form-label">Inmueble</label>
-              <input id="email"  formControlName="email" type="email" name="email" class="form-control" placeholder="email" required>
+              <label for="name" class="form-label">Inmueble</label>
+              <input id="name"  formControlName="inmuebles" type="text" name="name" class="form-control" placeholder="Inmueble" required>
             </div>
           </div>
 
           
-          <!--PNo-->
           <div class="row">
             <div class="col-md-12 form-group mb-3">
-              <label for="pNo" class="form-label">Direccion</label>
-              <input id="pNo" type="text" formControlName="pNo" name="pNo"class="form-control" placeholder="Phone Number" required>
+              <label for="direccion" class="form-label">Direccion</label>
+              <input id="direccion" type="text" formControlName="direccion" name="direccion"class="form-control" placeholder="Direccion" required>
             </div>
           </div>
          
             
-          <!--PNo-->
           <div class="row">
             <div class="col-md-12 form-group mb-3">
-              <label for="Address" class="form-label">ID inmueble</label>
-              <textarea id="Address" formControlName="address" type="text" name="address"  class="form-control" placeholder="New Delhi, India" rows="3" required></textarea>
+              <label for="idinmueble" class="form-label">ID inmueble</label>
+              <input id="Address" formControlName="id_inmueble" type="text" name="idinmueble"  class="form-control" placeholder="ID inmuble" required>
             </div>
           </div>
          
