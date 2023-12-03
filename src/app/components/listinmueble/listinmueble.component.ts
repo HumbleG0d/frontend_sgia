@@ -22,9 +22,9 @@ export class ListinmuebleComponent implements OnInit{
     })
   }
 
-  deleteInmueble(id_inmueble: string){
-    this.service.deleteUser(id_inmueble).subscribe(data => {
-      this.inmuebles = this.inmuebles?.filter(inm => inm.id_inmueble !== id_inmueble);
+  deleteInmueble(id: number){
+    this.service.deleteUser(id).subscribe(data => {
+      this.inmuebles = this.inmuebles?.filter(inm => inm.id !== id);
     })
     
       setTimeout(()=>{
@@ -33,8 +33,8 @@ export class ListinmuebleComponent implements OnInit{
   
   }
 
-  updateInmueble(id_inmueble: string){
-    this.router.navigate(['update', id_inmueble]);
+  updateInmueble(id: number){
+    this.router.navigate(['update', id]);
   }
 
 

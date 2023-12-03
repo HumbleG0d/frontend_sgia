@@ -45,17 +45,17 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let inm of inmuebles">
+                    <td>{{inm.id}}</td>
                     <td>{{inm.id_inmueble}}</td>
-                    <td>{{inm.numero_inmueble}}</td>
                     <td>{{inm.inmuebles}}</td>
                     <td>{{inm.direccion}}</td>
                     <td>{{inm.fecha_registro}}</td>
                     <td>
                         <div class="d-inline mx-2">
-                            <button class="btn btn-warning" (click)="updateInmueble(inm.id_inmueble)" type="button">Update</button>
+                            <button class="btn btn-warning" (click)="updateInmueble(inm.id)" type="button">Update</button>
                         </div>
                         <div class="d-inline">
-                          <button class="btn btn-danger" (click)="deleteInmueble(inm.id_inmueble)" type="button">Delete</button>
+                          <button class="btn btn-danger" (click)="deleteInmueble(inm.id)" type="button">Delete</button>
                         </div>
                     </td>
                   </tr>
