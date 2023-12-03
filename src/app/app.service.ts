@@ -23,18 +23,18 @@ export class AppService {
   }
 
   // Get Inmueble by Id - Read
-  getUserById(id_inmueble: string): Observable<Inmueble>{
-    return this.http.get<Inmueble>(`${this.url}search?id_inmuble=${id_inmueble}`)
+  getUserById(id: number): Observable<Inmueble>{
+    return this.http.get<Inmueble>(`${this.url}search?id_inmuble=${id}`)
   }
 
   // Update User - Update
-  updateInmueble(id?: string ,user?: any): Observable<any>{
+  updateInmueble(id?: number ,user?: any): Observable<any>{
     return this.http.put<any>(`${this.url}update/${id}`, user)
   } 
 
   // Delete Inmueble - Delete
-  deleteUser(id_inmueble: string): Observable<any>{
-    return this.http.delete<any>(`${this.url}delete/${id_inmueble}`)
+  deleteUser(id: number): Observable<any>{
+    return this.http.delete<any>(`${this.url}delete/${id}`)
   }
 
 }
