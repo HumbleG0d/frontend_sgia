@@ -24,7 +24,7 @@ export class AppService {
 
   // Get Inmueble by Id - Read
   getUserById(id: number): Observable<Inmueble>{
-    return this.http.get<Inmueble>(`${this.url}search?id_inmuble=${id}`)
+    return this.http.get<Inmueble>(`${this.url}search?id=${id}`)
   }
 
   // Update User - Update
